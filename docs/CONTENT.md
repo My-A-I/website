@@ -6,15 +6,19 @@ All marketing copy lives in [`lib/site-config.ts`](../lib/site-config.ts). Edit 
 
 ```typescript
 export const siteConfig = {
-  companyName: "Company Name",      // Header, footer, page title
-  tagline: "Custom AI assistants...", // Hero eyebrow, footer
-  email: "hello@example.com",         // All mailto links
-  siteUrl: "https://example.com",     // Set NEXT_PUBLIC_SITE_URL env or edit default before launch
+  companyName: "AtHand",              // Header, footer, page title
+  tagline: "Your team's knowledge, at hand.", // Hero eyebrow, footer
+  email: "hello@athand.cloud",        // All mailto links
+  siteUrl: "https://athand.cloud",    // Override with NEXT_PUBLIC_SITE_URL in production if needed
   copyrightYear: new Date().getFullYear(),
 };
-```
 
-**Before launch:** Replace `companyName` and `email` with real values.
+export const legalConfig = {
+  legalEntityName: "HUMAN/MACHINE",   // DBA; override with NEXT_PUBLIC_LEGAL_ENTITY_NAME
+  privacyEffectiveDate: "July 7, 2026",
+  analyticsProvider: "Vercel Analytics",
+};
+```
 
 ## Navigation
 

@@ -1,9 +1,18 @@
 export const siteConfig = {
-  companyName: "Company Name",
-  tagline: "Custom AI assistants for small businesses",
-  email: "hello@example.com",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
+  companyName: "AtHand",
+  tagline: "Your team's knowledge, at hand.",
+  supportingLine:
+    "From a new hire's first week to your tenth year — answers from your documents, not the internet.",
+  email: "hello@athand.cloud",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://athand.cloud",
   copyrightYear: new Date().getFullYear(),
+};
+
+export const legalConfig = {
+  legalEntityName:
+    process.env.NEXT_PUBLIC_LEGAL_ENTITY_NAME ?? "HUMAN/MACHINE",
+  privacyEffectiveDate: "July 7, 2026",
+  analyticsProvider: "Vercel Analytics",
 };
 
 export const navLinks = [
@@ -27,9 +36,9 @@ export function buildMailtoLink(options?: {
 
 export const heroContent = {
   headline:
-    "An AI assistant trained on your business — private, simple, built for your team.",
-  subheadline:
-    "We design and host a custom chat experience using your documents, policies, and workflows. No technical team required on your end.",
+    "Private AI trained on your business — built for every person on your team.",
+  detail:
+    "We design and host a custom chat experience using your documents, policies, and playbooks. No technical team required on your end.",
   ctaLabel: "Get in touch",
   ctaSubject: "Custom AI assistant inquiry",
   ctaBody:
@@ -86,7 +95,8 @@ export const howItWorksContent = {
 
 export const industriesContent = {
   title: "Built for professional services",
-  subtitle: "Every industry is different. We tailor the assistant to yours.",
+  subtitle:
+    "From a new hire's first week to your tenth year — we tailor the assistant to your industry and your playbooks.",
   industries: [
     {
       name: "Law firms",
@@ -137,6 +147,11 @@ export const benefitsContent = {
 export const faqContent = {
   title: "Common questions",
   items: [
+    {
+      question: "Can it help onboard new employees?",
+      answer:
+        "Yes. New hires can get answers from your playbooks, policies, and SOPs from day one — without pulling senior staff off client work. The same assistant helps experienced team members find what they need in seconds.",
+    },
     {
       question: "Is our data secure?",
       answer:

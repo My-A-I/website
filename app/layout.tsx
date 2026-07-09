@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Source_Serif_4 } from "next/font/google";
+import { Analytics } from "@/components/analytics";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -13,11 +14,9 @@ const serif = Source_Serif_4({
   subsets: ["latin"],
 });
 
-const pageTitle = `${siteConfig.companyName} | Custom AI Assistants for Small Business`;
-const pageDescription =
-  "We build private, custom AI assistants trained on your documents and workflows. Simple setup for law firms, accounting, and professional services.";
-const socialDescription =
-  "Private AI assistants trained on your business documents. No technical team required.";
+const pageTitle = `${siteConfig.companyName} | ${siteConfig.tagline}`;
+const pageDescription = `${siteConfig.supportingLine} Private AI assistants for law firms, accounting, and professional services.`;
+const socialDescription = siteConfig.supportingLine;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -60,6 +59,7 @@ export default function RootLayout({
     <html lang="en" className={`${sans.variable} ${serif.variable} h-full scroll-smooth`}>
       <body className="min-h-full flex flex-col bg-background font-sans text-foreground antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );

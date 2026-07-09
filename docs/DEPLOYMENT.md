@@ -6,9 +6,9 @@
 
 ## Pre-launch checklist
 
-- [ ] Update `companyName` in `lib/site-config.ts`
-- [ ] Update `email` in `lib/site-config.ts` (all CTAs use this)
-- [ ] Set `NEXT_PUBLIC_SITE_URL` to your production URL (used for `metadataBase` and social preview links)
+- [x] Update `companyName` in `lib/site-config.ts` (AtHand)
+- [x] Update `email` in `lib/site-config.ts` (hello@athand.cloud)
+- [ ] Set `NEXT_PUBLIC_SITE_URL` to your production URL if it differs from `https://athand.cloud` (used for `metadataBase` and social preview links)
 - [ ] Review section copy in `lib/site-config.ts`
 - [ ] Update SEO metadata in `app/layout.tsx` if needed
 - [ ] Run `npm run build` locally — must pass
@@ -36,22 +36,28 @@ Follow prompts for first deploy. Use `vercel --prod` for production.
 
 ## Environment variables
 
-None required for v1. The site is fully static with client-side `mailto:` links.
+| Variable | Purpose |
+|----------|---------|
+| `NEXT_PUBLIC_SITE_URL` | Production URL for Open Graph / Twitter metadata (defaults to `https://athand.cloud` in site config) |
 
-Optional:
+Optional for CLI analytics pulls (see [ANALYTICS.md](./ANALYTICS.md)):
 
 | Variable | Purpose |
 |----------|---------|
-| `NEXT_PUBLIC_SITE_URL` | Production URL for Open Graph / Twitter metadata (defaults to `https://example.com`) |
+| `VERCEL_TOKEN` | Non-interactive Vercel CLI auth |
+| `VERCEL_PROJECT` | Project name/ID if not linked locally |
+| `ANALYTICS_SINCE` | Time window for `npm run analytics:pull` (default `7d`) |
 
 ## Custom domain
 
 1. Vercel project → Settings → Domains
 2. Add your domain and configure DNS per Vercel instructions
 3. SSL is automatic
+4. Set `NEXT_PUBLIC_SITE_URL` to the production URL
 
-## Post-launch (optional)
+## Post-launch
 
-- Add analytics (Plausible, Google Analytics)
-- ~~Replace placeholder OG image in `app/layout.tsx`~~ — generated at `app/opengraph-image.tsx`
-- Add Privacy Policy / Terms pages when needed
+- [ ] Enable **Web Analytics** in Vercel project → Analytics
+- [ ] Run `npm run analytics:pull` after traffic exists (see [ANALYTICS.md](./ANALYTICS.md))
+- ~~Replace placeholder OG image~~ — generated at `app/opengraph-image.tsx`
+- Privacy Policy at `/privacy` (linked from footer)

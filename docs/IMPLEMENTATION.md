@@ -76,5 +76,5 @@ Final metadata pass, deployment docs, launch checklist.
 
 - **Audience:** Non-technical SMB owners
 - **Product:** Custom AI assistant + UI (LibreChat wrapper internally — not mentioned on site)
-- **Conversion:** `mailto:hello@example.com` with pre-filled subject/body
-- **Branding:** Placeholders until real name/logo provided
+- **Conversion:** `mailto:hello@athand.cloud` with pre-filled subject/body
+- **Branding:** AtHand (`athand.cloud`); legal entity HUMAN/MACHINE (DBA)

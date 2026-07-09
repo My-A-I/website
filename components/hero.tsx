@@ -26,8 +26,11 @@ export function Hero() {
           <h1 className="font-serif text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             {heroContent.headline}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            {heroContent.subheadline}
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-foreground sm:text-xl">
+            {siteConfig.supportingLine}
+          </p>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            {heroContent.detail}
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button href={contactHref}>{heroContent.ctaLabel}</Button>

@@ -53,8 +53,7 @@ export default function OpenGraphImage() {
             maxWidth: 820,
           }}
         >
-          Private AI assistants trained on your documents. Built for professional
-          services teams.
+          {siteConfig.supportingLine}
         </div>
       </div>
     ),
