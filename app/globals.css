@@ -6,6 +6,7 @@
   --muted: #f1f5f9;
   --muted-foreground: #64748b;
   --border: #e2e8f0;
+  /* UI accent — matches brandTokens.accent in lib/brand-tokens.ts */
   --accent: #0d9488;
   --accent-foreground: #ffffff;
 }

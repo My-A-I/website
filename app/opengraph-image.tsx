@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { brandTokens } from "@/lib/brand-tokens";
 import { siteConfig } from "@/lib/site-config";
 
 export const alt = siteConfig.tagline;
@@ -10,15 +11,15 @@ export default function OpenGraphImage() {
     (
       <div
         style={{
-          background: "linear-gradient(135deg, #0f172a 0%, #134e4a 100%)",
+          background: brandTokens.gradient,
           width: "100%",
           height: "100%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           padding: 80,
-          color: "#f8fafc",
-          fontFamily: "system-ui, sans-serif",
+          color: brandTokens.foreground,
+          fontFamily: brandTokens.fontSans,
         }}
       >
         <div
@@ -27,7 +28,7 @@ export default function OpenGraphImage() {
             fontWeight: 600,
             letterSpacing: "0.08em",
             textTransform: "uppercase",
-            color: "#5eead4",
+            color: brandTokens.highlight,
             marginBottom: 24,
           }}
         >
@@ -49,7 +50,7 @@ export default function OpenGraphImage() {
             marginTop: 32,
             fontSize: 28,
             lineHeight: 1.4,
-            color: "#cbd5e1",
+            color: brandTokens.muted,
             maxWidth: 820,
           }}
         >

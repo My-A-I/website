@@ -60,4 +60,5 @@ Optional for CLI analytics pulls (see [ANALYTICS.md](./ANALYTICS.md)):
 - [ ] Enable **Web Analytics** in Vercel project → Analytics
 - [ ] Run `npm run analytics:pull` after traffic exists (see [ANALYTICS.md](./ANALYTICS.md))
 - ~~Replace placeholder OG image~~ — generated at `app/opengraph-image.tsx`
+- [x] Favicon and Apple touch icon at `app/icon.tsx` and `app/apple-icon.tsx` (legacy `app/favicon.ico` included)
 - Privacy Policy at `/privacy` (linked from footer)
